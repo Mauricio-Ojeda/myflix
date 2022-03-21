@@ -1,9 +1,8 @@
 import useSWR from "swr";
-
 import ReactPlayer from "react-player";
 import { useState } from "react/cjs/react.development";
-import NavBar from "./nav-bar/NavBar";
 import { Button, Box, Container, Stack } from "@chakra-ui/react";
+import NavBar from "./nav-bar/NavBar";
 
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
