@@ -1,8 +1,9 @@
 import useSWR from "swr";
 import ReactPlayer from "react-player";
 import { useState } from "react/cjs/react.development";
-import { Button, Box, Container, Stack } from "@chakra-ui/react";
+import { Box, Container, Stack, Text } from "@chakra-ui/react";
 import NavBar from "./nav-bar/NavBar";
+import Image from "next/image";
 
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
@@ -55,16 +56,21 @@ const Header = () => {
             justifyContent="flex-end"
             alignItems="flex-end"
             mr={5}
+            mb={10}
+            cursor="pointer"
+            direction="row"
+            spacing={5}
           >
-            <Button
-              bg="transparent"
-              color="red.500"
+            <Image
+              src={muted ? "/sound-off.png" : "/sound-on.png"}
               onClick={() => setMuted(!muted)}
-              zIndex={100}
-              w="14"
-            >
-              mute
-            </Button>
+              alt="sound"
+              width="36px"
+              height="36px"
+            />
+            <Text color="white" fontSize="2xl" borderLeft="2px" pl={3}>
+              TV-G
+            </Text>
           </Stack>
         </Stack>
       </Box>
