@@ -9,7 +9,12 @@ const NavBar = () => {
       <Stack
         as="nav"
         direction="row"
-        bgGradient="linear(to-b, #141414, transparent)"
+        bgGradient={[
+          "linear(to-b, #141414, #141414)",
+          "linear(to-b, #141414, #141414)",
+          "linear(to-b, #141414, transparent)",
+          "linear(to-b, #141414, transparent)",
+        ]}
         h="65px"
         align="center"
         justify="space-between"
