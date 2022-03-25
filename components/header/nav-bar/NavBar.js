@@ -24,7 +24,7 @@ const NavBar = () => {
         position="fixed"
         zIndex={999}
       >
-        <Stack direction="row" align="center" pl="10">
+        <Stack direction="row" align="center" pl="12">
           <Logo alignSelf="center" justify="left" mt={1} pr="8" />
           <LeftMenu />
         </Stack>
